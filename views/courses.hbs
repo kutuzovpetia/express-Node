@@ -1,0 +1,28 @@
+{{#if courses.length}}
+    <div class="row">
+        {{#each courses}}
+            <div class="col m12 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{img}}" alt="{{title}}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{title}}</span>
+                        <p class="price">{{price}}</p>
+                    </div>
+                    <div class="card-action actions">
+                        <a href="/courses/{{id}}" target="_blank">Открыть курс</a>
+                        <a href="/courses/{{id}}/edit?allow=true"><i class="material-icons">border_color</i></a>
+                        <form action="/card/add" method="POST">
+                            <input type="hidden" name="id" value="{{id}}">
+                            <button type="submit" class="btn btn-primary">Купить</button>
+                        </form>
+                    </div>
+                    <p class="author"><span>Добавил: </span>{{userId.name}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+<h1>Курсов нет</h1>
+{{/if}}

@@ -1,0 +1,89 @@
+<nav class="light-blue accent-3">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Приложение курсов</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--            HOME-->
+            {{#if isHome}}
+                <li class="active"><a href="/">Главная страница</a></li>
+            {{else}}
+                <li><a href="/">Главная страница</a></li>
+            {{/if}}
+<!--            COURSES-->
+            {{#if isCourses}}
+                <li class="active"><a href="/courses">Курсы</a></li>
+            {{else}}
+                <li><a href="/courses">Курсы</a></li>
+            {{/if}}
+<!--            ADD-->
+            {{#if isAdd}}
+                <li class="active"><a href="/add">Добавить курс</a></li>
+            {{else}}
+                <li><a href="/add">Добавить курс</a></li>
+            {{/if}}
+
+            {{#if isCard}}
+                <li class="active"><a href="/card">Корзина</a></li>
+            {{else}}
+                <li><a href="/card">Корзина</a></li>
+            {{/if}}
+<!--            ORDER-->
+            {{#if isOrder}}
+                <li class="active"><a href="/orders">Заказы</a></li>
+            {{else}}
+                <li><a href="/orders">Заказы</a></li>
+            {{/if}}
+<!--        Login-->
+            {{#if isLogin}}
+                <li class="active"><a href="/auth/login#login">Войти</a></li>
+            {{else}}
+                <li><a href="/auth/login#login">Войти</a></li>
+            {{/if}}
+        </ul>
+
+    </div>
+</nav>
+
+<!--Мобильная версия-->
+<ul class="sidenav" id="mobile-demo">
+    <!--            HOME-->
+    {{#if isHome}}
+        <li class="active"><a href="/"><i class="material-icons">home</i>Главная страница</a></li>
+    {{else}}
+        <li><a href="/"><i class="material-icons">home</i>Главная страница</a></li>
+    {{/if}}
+    <!--            COURSES-->
+    {{#if isCourses}}
+        <li class="active"><a href="/courses"><i class="material-icons">import_contacts</i>Курсы</a></li>
+    {{else}}
+        <li><a href="/courses"><i class="material-icons">import_contacts</i>Курсы</a></li>
+    {{/if}}
+    <!--            ADD-->
+    {{#if isAdd}}
+        <li class="active"><a href="/add"><i class="material-icons">add_circle_outline</i>Добавить курс</a></li>
+    {{else}}
+        <li><a href="/add"><i class="material-icons">add_circle_outline</i>Добавить курс</a></li>
+    {{/if}}
+
+    {{#if isCard}}
+        <li class="active"><a href="/card"><i class="material-icons">add_shopping_cart</i>Корзина</a></li>
+    {{else}}
+        <li><a href="/card"><i class="material-icons">add_shopping_cart</i>Корзина</a></li>
+    {{/if}}
+
+    <!--            ORDER-->
+    {{#if isOrder}}
+        <li class="active"><a href="/orders"><i class="material-icons">local_atm</i>Заказы</a></li>
+    {{else}}
+        <li><a href="/orders"><i class="material-icons">local_atm</i>Заказы</a></li>
+    {{/if}}
+    <!--        Login-->
+    {{#if isLogin}}
+        <li class="active"><a href="/auth/login#login"><i class="material-icons">account_circle</i>Войти</a></li>
+    {{else}}
+        <li><a href="/auth/login#login"><i class="material-icons">account_circle</i>Войти</a></li>
+    {{/if}}
+</ul>
+</ul>
+
+
