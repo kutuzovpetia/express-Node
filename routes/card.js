@@ -1,6 +1,7 @@
 const {Router} = require('express');
 const router = Router();
 const Course = require('../models/cours');
+const User = require("../models/user");
 
 function mapCartItems(cart){
     return cart.items.map(c =>({
