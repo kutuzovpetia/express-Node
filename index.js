@@ -10,6 +10,7 @@ const User = require('./models/user');
 const session = require('express-session');
 const varMiddleware = require('./middleware/variables');
 const MongoStore = require('connect-mongodb-session')(session); // Для сохранения сессии в базе
+const userMiddleware = require('./middleware/user');
 
 
 // Для подключения к базе
@@ -73,6 +74,8 @@ app.use(express.urlencoded({extended: true}));
 
 // Подключили свой middleware
 app.use(varMiddleware);
+app.use(userMiddleware);
+
 
 // Роуты
 app.use('/', homeRoutes);
