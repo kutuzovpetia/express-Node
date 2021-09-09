@@ -21,7 +21,7 @@ const toDate = date => {
     ).format(new Date(date))
 }
 
-document.querySelectorAll('.date').forEach(d=>{
+document.querySelectorAll('.date').forEach(d => {
     d.textContent = toDate(d.textContent);
     toDate(d.textContent);
 })
