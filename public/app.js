@@ -59,7 +59,11 @@ if($card){
                                 <td>${c.count}</td>
                                 <td>${c.price}</td>
                                 <td>
-                                <button class="btn btn-primary js-remove" data-id="${c.id}">Удалить</button>
+                                <button 
+                                class="btn btn-primary js-remove" 
+                                data-id="${c.id}"
+                                data-csrf="${csrf}"
+                                >Удалить</button>
                                 </td>
                             </tr>
                         `

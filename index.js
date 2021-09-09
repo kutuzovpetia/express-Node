@@ -1,5 +1,6 @@
 const express = require('express');
 const csrf = require('csurf');
+const flash = require('connect-flash'); // Для вывода сообщений об ошибках
 const mongoose = require('mongoose');
 const path = require('path');
 const Handlebars = require('handlebars');
@@ -60,6 +61,7 @@ app.use(session({
 
 // Подключили свой middleware
 app.use(csrf());
+app.use(flash());
 app.use(varMiddleware);
 app.use(userMiddleware);
 
