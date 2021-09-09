@@ -4,10 +4,9 @@ const User = require("../models/user");
 const router = Router();
 
 router.get('/login', async (req, res)=>{
-
     res.render('auth/login', {
         title: 'Авторизация',
-        isLogin: true
+        isLogin: true,
     })
 })
 

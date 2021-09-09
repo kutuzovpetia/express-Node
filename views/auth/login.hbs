@@ -10,16 +10,18 @@
             <h2>Войти в магазин</h2>
             <form action="/auth/login" method="POST">
                 <div class="input-field">
-                    <input name="email" placeholder="Название" id="email" type="email" class="validate" required>
+                    <input name="email" placeholder="Email" id="email" type="email" class="validate" required>
                     <label for="email">Email</label>
                     <span class="helper-text" data-error="Введите email"></span>
                 </div>
 
                 <div class="input-field">
-                    <input name="password" placeholder="Цена" id="password" type="password" class="validate" required>
+                    <input name="password" placeholder="Пароль" id="password" type="password" class="validate" required>
                     <label for="price">Пароль</label>
                     <span class="helper-text" data-error="Введите пароль"></span>
                 </div>
+
+                <input type="hidden" name="_csrf" value="{{csrf}}">
 
                 <button class="btn btn-primary" type="submit">Войти</button>
             </form>
@@ -49,6 +51,8 @@
                     <label for="confirm">Пароль еще раз</label>
                     <span class="helper-text" data-error="Введите пароль"></span>
                 </div>
+
+                <input type="hidden" name="_csrf" value="{{csrf}}">
 
                 <button class="btn btn-primary" type="submit">Зарегестрироваться</button>
             </form>

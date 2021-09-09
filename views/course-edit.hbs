@@ -20,12 +20,13 @@
     </div>
 
     <input type="hidden" name="id" value="{{course.id}}">
-
+    <input type="hidden" name="_csrf" value="{{csrf}}">
     <button type="submit" class="waves-effect btn btn-primary">Редактировать курс</button>
 </form>
 
 <form class="form-remove" action="/courses/remove" method="POST">
     <input type="hidden" name="id" value="{{course.id}}">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
     <button class="waves-effect btn red darken-4">Удалить курс</button>
 </form>
 
